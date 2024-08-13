@@ -1,0 +1,30 @@
+.userControl {
+    background-color: rgb(107, 107, 107);
+    padding: 5px;
+}
+
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+/*https://www.w3schools.com/css/css3_flexbox_container.asp*/
+
+.eachRow {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
+.eachSquare {
+    flex: 1;
+    border-style: solid;
+    border-color: black;
+    background-color: aquamarine;
+    height: 50px;
+}
+
+
+.squareAfterHover {
+    background-color: black;
+}

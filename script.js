@@ -1,4 +1,5 @@
 const createButton = document.querySelector("#enter");
+const resetButton = document.querySelector("#reset");
 
 createButton.addEventListener("click", () => {
     const containerDiv = document.querySelector(".mainContainer");
@@ -8,6 +9,9 @@ createButton.addEventListener("click", () => {
 
 });
 
+resetButton.addEventListener("click", () => {
+    reset()
+});
 
 function grabInputs() {
     const inputRows = document.querySelector('#numberRows');
@@ -33,8 +37,20 @@ function createGrid(parentDiv, numberRows, numberCols) {
 
             newSquare.addEventListener("mouseover", () => {
                 newSquare.classList.add("squareAfterHover");
+                let squareStyle = window.getComputedStyle(newSquare);
+                let currentBrightness = parseFloat(squareStyle['filter'].slice(10).slice(1,-1))
+                newSquare.style.filter=`brightness(${(currentBrightness > 0) ? currentBrightness -= 0.1 : currentBrightness})`;
+                //console.log(currentBrightness);
             });
         }
         parentDiv.appendChild(newRow);
     }
+}
+
+function reset() {
+    const boxes = document.querySelectorAll(".eachRow");
+    const containerDiv = document.querySelector(".mainContainer");
+    boxes.forEach((box) => {
+        containerDiv.removeChild(box);
+    });
 }

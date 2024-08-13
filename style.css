@@ -32,11 +32,11 @@ body {
 .eachSquare {
     flex: 1;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     background-color: aquamarine;
 }
 
 
 .squareAfterHover {
-    background-color: black;
+    filter: brightness(1);
 }

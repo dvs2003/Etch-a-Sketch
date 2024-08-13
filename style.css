@@ -1,4 +1,12 @@
+body {
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .userControl {
+    flex: 1;
     background-color: rgb(107, 107, 107);
     padding: 5px;
 }
@@ -7,6 +15,10 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
+    background-color: blue;
+    padding: 10px;
+    align-content: stretch;
+    flex: 55;
 }
 /*https://www.w3schools.com/css/css3_flexbox_container.asp*/
 
@@ -14,6 +26,7 @@
     background-color: aqua;
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
 .eachSquare {
@@ -21,7 +34,6 @@
     border-style: solid;
     border-color: black;
     background-color: aquamarine;
-    height: 50px;
 }
 
 
